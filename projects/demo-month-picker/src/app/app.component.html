@@ -9,7 +9,14 @@
 </div>
 
 <div class="content" role="main">
-    <ng-month-picker [(ngModel)]="currentMonth"></ng-month-picker>
+    <ng-month-picker [(ngModel)]="currentMonth" (ngModelChange)="changeValue($event)"></ng-month-picker>
+
+    <!-- Reactive form example -->
+    <!-- <form [formGroup]="infoForm" (ngSubmit)="onSubmit()">
+      <input type="text"  name="title" formControlName="title">
+      <ng-month-picker name="month" formControlName="currentMonth"></ng-month-picker>
+      <button type="submit">Submit</button>
+   </form> -->
 </div>
 
 
